@@ -12,9 +12,9 @@ app.get('/', (c) => {
   return c.text('Hello Hono! AI Chat, Embedding & Context Knowledge Base API is running.')
 })
 
-// Mount routes
-app.route('/chat', chat)
-app.route('/embedding', embedding)
-app.route('/context', context)
+// Mount routes under /api prefix
+app.route('/api/chat', chat)
+app.route('/api/embedding', embedding)
+app.route('/api/context', context)
 
 export default app

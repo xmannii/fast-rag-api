@@ -67,7 +67,7 @@ ollama pull embeddinggemma:latest
 
 ### 🗣️ Chat Endpoint
 
-**POST** `/chat`
+**POST** `/api/chat`
 
 Stream AI responses with optional RAG context retrieval.
 
@@ -108,7 +108,7 @@ data: [DONE]
 
 #### Add Context
 
-**POST** `/context/add`
+**POST** `/api/context/add`
 
 ```json
 {
@@ -124,7 +124,7 @@ data: [DONE]
 
 #### Search Context
 
-**POST** `/context/search`
+**POST** `/api/context/search`
 
 ```json
 {
@@ -136,7 +136,7 @@ data: [DONE]
 
 #### Remove Context
 
-**DELETE** `/context/remove`
+**DELETE** `/api/context/remove`
 
 ```json
 {
@@ -146,13 +146,13 @@ data: [DONE]
 
 #### Get Stats
 
-**GET** `/context/stats`
+**GET** `/api/context/stats`
 
 Returns database statistics and configuration.
 
 ### 🧠 Embedding Generation
 
-**POST** `/embedding`
+**POST** `/api/embedding`
 
 ```json
 {
@@ -164,7 +164,7 @@ Returns database statistics and configuration.
 }
 ```
 
-**GET** `/embedding/models`
+**GET** `/api/embedding/models`
 
 Returns available embedding models.
 
@@ -234,7 +234,7 @@ export const config = {
 ### Basic Chat
 
 ```bash
-curl -X POST http://localhost:3000/chat \
+curl -X POST http://localhost:3000/api/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -254,7 +254,7 @@ curl -X POST http://localhost:3000/chat \
 ### RAG-Enhanced Chat
 
 ```bash
-curl -X POST http://localhost:3000/chat \
+curl -X POST http://localhost:3000/api/chat \
   -H "Content-Type: application/json" \
   -d '{
     "messages": [
@@ -275,7 +275,7 @@ curl -X POST http://localhost:3000/chat \
 ### Add Knowledge Base Content
 
 ```bash
-curl -X POST http://localhost:3000/context/add \
+curl -X POST http://localhost:3000/api/context/add \
   -H "Content-Type: application/json" \
   -d '{
     "text": "Our company specializes in AI-powered solutions for enterprise clients. We have 50+ employees across engineering, sales, and operations teams.",
@@ -290,7 +290,7 @@ curl -X POST http://localhost:3000/context/add \
 ### Search Knowledge Base
 
 ```bash
-curl -X POST http://localhost:3000/context/search \
+curl -X POST http://localhost:3000/api/context/search \
   -H "Content-Type: application/json" \
   -d '{
     "query": "company employees",
@@ -403,7 +403,7 @@ metadata: {
 
 1. **Add test data:**
    ```bash
-   curl -X POST http://localhost:3000/context/add \
+   curl -X POST http://localhost:3000/api/context/add \
      -H "Content-Type: application/json" \
      -d '{
        "text": "Q3 2024 Financial Report: Revenue $2.4M, Profit $600K",
@@ -413,7 +413,7 @@ metadata: {
 
 2. **Test RAG query:**
    ```bash
-   curl -X POST http://localhost:3000/chat \
+   curl -X POST http://localhost:3000/api/chat \
      -H "Content-Type: application/json" \
      -d '{
        "messages": [{"role": "user", "parts": [{"type": "text", "text": "What was our Q3 profit?"}]}],
@@ -423,7 +423,7 @@ metadata: {
 
 3. **Verify context search:**
    ```bash
-   curl -X POST http://localhost:3000/context/search \
+   curl -X POST http://localhost:3000/api/context/search \
      -H "Content-Type: application/json" \
      -d '{"query": "Q3 profit", "threshold": 0.3}'
    ```

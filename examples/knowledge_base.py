@@ -11,7 +11,7 @@ import requests
 import json
 
 # Configuration
-API_BASE = "http://localhost:3000"
+API_BASE = "http://localhost:3000/api"
 
 # Sample knowledge base data
 SAMPLE_DATA = [

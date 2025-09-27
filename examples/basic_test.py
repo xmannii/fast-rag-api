@@ -11,7 +11,7 @@ import requests
 import json
 
 # Configuration
-API_BASE = "http://localhost:3000"
+API_BASE = "http://localhost:3000/api"
 
 def test_endpoints():
     """Test all API endpoints."""

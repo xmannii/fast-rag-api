@@ -13,7 +13,7 @@ import time
 import statistics
 
 # Configuration
-API_BASE = "http://localhost:3000"
+API_BASE = "http://localhost:3000/api"
 
 def make_request(endpoint, method="GET", data=None):
     """Make a request and measure response time."""

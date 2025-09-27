@@ -12,7 +12,7 @@ import json
 import math
 
 # Configuration
-API_BASE = "http://localhost:3000"
+API_BASE = "http://localhost:3000/api"
 
 def generate_embeddings(texts):
     """Generate embeddings for a list of texts."""
