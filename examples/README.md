@@ -83,7 +83,7 @@ python examples/performance_test.py
 ## 🛠️ Customization
 
 All examples use the default configuration:
-- **API Base**: `http://localhost:3000`
+- **API Base**: `http://localhost:3000/api`
 - **Default Models**: As configured in `src/config.ts`
 
 You can modify the examples to:
