@@ -1,7 +1,11 @@
 {
   "name": "rag-hono",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist --target bun",
+    "start": "bun run dist/index.js",
+    "type-check": "bun run --dry-run src/index.ts",
+    "lint": "bun run --dry-run src/index.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^2.0.38",

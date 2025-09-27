@@ -328,7 +328,7 @@ src/
 ### Available Scripts
 
 ```bash
-# Development server
+# Development server with hot reload
 bun run dev
 
 # Build for production
@@ -342,23 +342,6 @@ bun run type-check
 
 # Linting
 bun run lint
-```
-
-### Environment Variables
-
-Create a `.env` file:
-
-```env
-# Ollama Configuration
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_TIMEOUT=30000
-
-# Server Configuration
-PORT=3000
-NODE_ENV=development
-
-# Optional: Custom paths
-CONTEXT_DB_PATH=context-db
 ```
 
 ## 🔧 Customization
