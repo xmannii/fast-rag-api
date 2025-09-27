@@ -46,8 +46,7 @@ A powerful **Retrieval Augmented Generation (RAG)** API built with **Hono** and 
 ```bash
 # Clone the repository
 git clone https://github.com/xmannii/fast-rag-api
-cd rag-hono
-
+cd fast-rag-api
 # Install dependencies
 bun install
 
