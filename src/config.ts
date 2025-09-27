@@ -1,7 +1,7 @@
 // Configuration for RAG API
 export const config = {
   // Default Ollama model
-  defaultModel: 'gemma3:270m',
+  defaultModel: 'qwen3:4b-thinking-2507-q4_K_M',
   
   // Available models (for validation)
   availableModels: [
