@@ -21,7 +21,7 @@ def test_endpoints():
     # Test 1: Health check
     print("\n1. Health Check")
     try:
-        response = requests.get(f"{API_BASE}/")
+        response = requests.get("http://localhost:3000/")
         print(f"   Status: {response.status_code}")
         print(f"   Response: {response.text}")
     except Exception as e:

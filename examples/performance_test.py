@@ -208,7 +208,7 @@ def main():
     
     # Check if server is running
     try:
-        response = requests.get(f"{API_BASE}/")
+        response = requests.get("http://localhost:3000/")
         if response.status_code != 200:
             print("❌ Server is not running!")
             print("💡 Start the server with: bun run dev")
